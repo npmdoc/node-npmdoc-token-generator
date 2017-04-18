@@ -1,0 +1,1101 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/findhit/token-generator"
+
+    >token-generator (v1.0.0)</a>
+</h1>
+<h4>offline token generator and validator</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.token-generator">module token-generator</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.token-generator.token-generator">
+            function <span class="apidocSignatureSpan"></span>token-generator
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.token-generator.addDestroyHook">
+            function <span class="apidocSignatureSpan">token-generator.</span>addDestroyHook
+            <span class="apidocSignatureSpan">( fn )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.token-generator.addInitHook">
+            function <span class="apidocSignatureSpan">token-generator.</span>addInitHook
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.token-generator.associate">
+            function <span class="apidocSignatureSpan">token-generator.</span>associate
+            <span class="apidocSignatureSpan">( alias, TargetClass, type )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.token-generator.belongsTo">
+            function <span class="apidocSignatureSpan">token-generator.</span>belongsTo
+            <span class="apidocSignatureSpan">( alias, TargetClass )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.token-generator.construct">
+            function <span class="apidocSignatureSpan">token-generator.</span>construct
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.token-generator.deassociate">
+            function <span class="apidocSignatureSpan">token-generator.</span>deassociate
+            <span class="apidocSignatureSpan">( TargetClass )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.token-generator.extend">
+            function <span class="apidocSignatureSpan">token-generator.</span>extend
+            <span class="apidocSignatureSpan">( props )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.token-generator.hasMany">
+            function <span class="apidocSignatureSpan">token-generator.</span>hasMany
+            <span class="apidocSignatureSpan">( alias, TargetClass )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.token-generator.hasOne">
+            function <span class="apidocSignatureSpan">token-generator.</span>hasOne
+            <span class="apidocSignatureSpan">( alias, TargetClass )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.token-generator.include">
+            function <span class="apidocSignatureSpan">token-generator.</span>include
+            <span class="apidocSignatureSpan">(props)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.token-generator.mergeOptions">
+            function <span class="apidocSignatureSpan">token-generator.</span>mergeOptions
+            <span class="apidocSignatureSpan">( options )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.token-generator.mixin">
+            function <span class="apidocSignatureSpan">token-generator.</span>mixin
+            <span class="apidocSignatureSpan">(props)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.token-generator.parent">
+            function <span class="apidocSignatureSpan">token-generator.</span>parent
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.token-generator.toString">
+            function <span class="apidocSignatureSpan">token-generator.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">token-generator.</span>parent.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">token-generator.</span>parent.prototype._initHooks</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.token-generator.parent">module token-generator.parent</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.token-generator.parent.parent">
+            function <span class="apidocSignatureSpan">token-generator.</span>parent
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.token-generator.parent.addDestroyHook">
+            function <span class="apidocSignatureSpan">token-generator.parent.</span>addDestroyHook
+            <span class="apidocSignatureSpan">( fn )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.token-generator.parent.addInitHook">
+            function <span class="apidocSignatureSpan">token-generator.parent.</span>addInitHook
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.token-generator.parent.associate">
+            function <span class="apidocSignatureSpan">token-generator.parent.</span>associate
+            <span class="apidocSignatureSpan">( alias, TargetClass, type )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.token-generator.parent.belongsTo">
+            function <span class="apidocSignatureSpan">token-generator.parent.</span>belongsTo
+            <span class="apidocSignatureSpan">( alias, TargetClass )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.token-generator.parent.construct">
+            function <span class="apidocSignatureSpan">token-generator.parent.</span>construct
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.token-generator.parent.deassociate">
+            function <span class="apidocSignatureSpan">token-generator.parent.</span>deassociate
+            <span class="apidocSignatureSpan">( TargetClass )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.token-generator.parent.extend">
+            function <span class="apidocSignatureSpan">token-generator.parent.</span>extend
+            <span class="apidocSignatureSpan">( props )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.token-generator.parent.hasMany">
+            function <span class="apidocSignatureSpan">token-generator.parent.</span>hasMany
+            <span class="apidocSignatureSpan">( alias, TargetClass )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.token-generator.parent.hasOne">
+            function <span class="apidocSignatureSpan">token-generator.parent.</span>hasOne
+            <span class="apidocSignatureSpan">( alias, TargetClass )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.token-generator.parent.include">
+            function <span class="apidocSignatureSpan">token-generator.parent.</span>include
+            <span class="apidocSignatureSpan">(props)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.token-generator.parent.mergeOptions">
+            function <span class="apidocSignatureSpan">token-generator.parent.</span>mergeOptions
+            <span class="apidocSignatureSpan">( options )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.token-generator.parent.mixin">
+            function <span class="apidocSignatureSpan">token-generator.parent.</span>mixin
+            <span class="apidocSignatureSpan">(props)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.token-generator.parent.prototype">module token-generator.parent.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.token-generator.parent.prototype.callDestroyHooks">
+            function <span class="apidocSignatureSpan">token-generator.parent.prototype.</span>callDestroyHooks
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.token-generator.parent.prototype.callInitHooks">
+            function <span class="apidocSignatureSpan">token-generator.parent.prototype.</span>callInitHooks
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">token-generator.parent.prototype.</span>_destroyHooks</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">token-generator.parent.prototype.</span>_initHooks</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.token-generator.parent.prototype._initHooks">module token-generator.parent.prototype._initHooks</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.token-generator.parent.prototype._initHooks.0">
+            function <span class="apidocSignatureSpan">token-generator.parent.prototype._initHooks.</span>0
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.token-generator" id="apidoc.module.token-generator">module token-generator</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.token-generator.token-generator" id="apidoc.element.token-generator.token-generator">
+        function <span class="apidocSignatureSpan"></span>token-generator
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">token-generator = function () {
+    var r;
+
+    // Recall as new if new isn&#x27;t provided :)
+    if( Util.isnt.instanceof( NewClass, this ) ) {
+        return ClassUtil.construct( NewClass, arguments );
+    }
+
+    // call the constructor
+    if ( Util.is.Function( this.initialize ) ) {
+        r = this.initialize.apply(this, arguments);
+    }
+
+    // call all constructor hooks
+    this.callInitHooks();
+
+    return typeof r != &#x27;undefined&#x27; ? r : this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.token-generator.addDestroyHook" id="apidoc.element.token-generator.addDestroyHook">
+        function <span class="apidocSignatureSpan">token-generator.</span>addDestroyHook
+        <span class="apidocSignatureSpan">( fn )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addDestroyHook = function ( fn ) { // (Function) || (String, args...)
+    var args = Array.prototype.slice.call( arguments, 1 );
+
+    var destroy = typeof fn === &#x27;function&#x27; ? fn : function () {
+        this[fn].apply(this, args);
+    };
+
+    this.prototype._destroyHooks = this.prototype._destroyHooks || [];
+    this.prototype._destroyHooks.push(destroy);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.token-generator.addInitHook" id="apidoc.element.token-generator.addInitHook">
+        function <span class="apidocSignatureSpan">token-generator.</span>addInitHook
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addInitHook = function (fn) { // (Function) || (String, args...)
+    var args = Array.prototype.slice.call(arguments, 1);
+
+    var init = typeof fn === &#x27;function&#x27; ? fn : function () {
+        this[fn].apply(this, args);
+    };
+
+    this.prototype._initHooks = this.prototype._initHooks || [];
+    this.prototype._initHooks.push(init);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.token-generator.associate" id="apidoc.element.token-generator.associate">
+        function <span class="apidocSignatureSpan">token-generator.</span>associate
+        <span class="apidocSignatureSpan">( alias, TargetClass, type )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">associate = function ( alias, TargetClass, type ) {
+    var association = this.associations.get( TargetClass );
+
+    if ( association ) {
+        return false;
+    }
+
+    return new Association( this, TargetClass, alias, type );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.token-generator.belongsTo" id="apidoc.element.token-generator.belongsTo">
+        function <span class="apidocSignatureSpan">token-generator.</span>belongsTo
+        <span class="apidocSignatureSpan">( alias, TargetClass )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">belongsTo = function ( alias, TargetClass ) {
+    return this.associate( alias, TargetClass, 1 );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.token-generator.construct" id="apidoc.element.token-generator.construct">
+        function <span class="apidocSignatureSpan">token-generator.</span>construct
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">construct = function () {
+    return ClassUtil.construct( this, arguments );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.token-generator.deassociate" id="apidoc.element.token-generator.deassociate">
+        function <span class="apidocSignatureSpan">token-generator.</span>deassociate
+        <span class="apidocSignatureSpan">( TargetClass )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deassociate = function ( TargetClass ) {
+    var association = this.associations.get( TargetClass );
+
+    if ( ! association ) {
+        return false;
+    }
+
+    association.unbind();
+
+    if( association.targetAssocation ) {
+        association.targetAssociation.unbind();
+        association.unbindTargetAssociation();
+    }
+
+    return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.token-generator.extend" id="apidoc.element.token-generator.extend">
+        function <span class="apidocSignatureSpan">token-generator.</span>extend
+        <span class="apidocSignatureSpan">( props )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extend = function ( props ) {
+    var NewClass = origExtend.apply( this, arguments ),
+        proto = NewClass.prototype,
+        parentProto = NewClass.parent.prototype;
+
+    if( typeof NewClass !== &#x27;function&#x27; ) {
+        return NewClass;
+    }
+
+    // merge options if they exist
+    if ( parentProto.options ) {
+
+        // Create prototyped options on class&#x27;s prototype
+        proto.options = ClassUtil.create( parentProto.options );
+
+        // Now extend from props
+        if( props.options ) {
+            Util.extend( proto.options, props.options );
+        }
+    }
+
+    proto.setOptions = function ( options ) {
+
+        // If this object doesn&#x27;t have options directly
+        if ( ! this.hasOwnProperty(&#x27;options&#x27;) ) {
+
+            // We should create it from a parent proto, or just a new object
+            this.options = this.options ? ClassUtil.create( this.options ) : {};
+
+        }
+
+        // Now extend from props
+        Util.extend( this.options, options );
+
+        // Return always options object, someone could reuse any var with this
+        // Example: function ( o ) { o = this.setOptions( o ); /* ... */ }
+        return this.options;
+    };
+
+    return NewClass;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+var Class = require( &#x27;findhit-class&#x27; ),
+    Util = require( &#x27;findhit-util&#x27; ),
+    crypto = require( &#x27;crypto&#x27; ),
+    debug = require( &#x27;debug&#x27; )( &#x27;token-generator&#x27; );
+
+var TokenGenerator = module.exports = Class.<span class="apidocCodeKeywordSpan">extend</span>({
+
+    options: {
+
+
+/**
+ * @option salt
+ * @required
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.token-generator.hasMany" id="apidoc.element.token-generator.hasMany">
+        function <span class="apidocSignatureSpan">token-generator.</span>hasMany
+        <span class="apidocSignatureSpan">( alias, TargetClass )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hasMany = function ( alias, TargetClass ) {
+    return this.associate( alias, TargetClass, Infinity );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.token-generator.hasOne" id="apidoc.element.token-generator.hasOne">
+        function <span class="apidocSignatureSpan">token-generator.</span>hasOne
+        <span class="apidocSignatureSpan">( alias, TargetClass )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hasOne = function ( alias, TargetClass ) {
+    return this.associate( alias, TargetClass, 1 );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.token-generator.include" id="apidoc.element.token-generator.include">
+        function <span class="apidocSignatureSpan">token-generator.</span>include
+        <span class="apidocSignatureSpan">(props)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">include = function (props) {
+    Util.extend(this.prototype, props);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.token-generator.mergeOptions" id="apidoc.element.token-generator.mergeOptions">
+        function <span class="apidocSignatureSpan">token-generator.</span>mergeOptions
+        <span class="apidocSignatureSpan">( options )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mergeOptions = function ( options ) {
+    return Util.extend( this.prototype.options, options );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.token-generator.mixin" id="apidoc.element.token-generator.mixin">
+        function <span class="apidocSignatureSpan">token-generator.</span>mixin
+        <span class="apidocSignatureSpan">(props)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mixin = function (props) {
+    Util.extend(this.prototype, props);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.token-generator.parent" id="apidoc.element.token-generator.parent">
+        function <span class="apidocSignatureSpan">token-generator.</span>parent
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parent = function () {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.token-generator.toString" id="apidoc.element.token-generator.toString">
+        function <span class="apidocSignatureSpan">token-generator.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.token-generator.parent" id="apidoc.module.token-generator.parent">module token-generator.parent</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.token-generator.parent.parent" id="apidoc.element.token-generator.parent.parent">
+        function <span class="apidocSignatureSpan">token-generator.</span>parent
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parent = function () {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.token-generator.parent.addDestroyHook" id="apidoc.element.token-generator.parent.addDestroyHook">
+        function <span class="apidocSignatureSpan">token-generator.parent.</span>addDestroyHook
+        <span class="apidocSignatureSpan">( fn )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addDestroyHook = function ( fn ) { // (Function) || (String, args...)
+    var args = Array.prototype.slice.call( arguments, 1 );
+
+    var destroy = typeof fn === &#x27;function&#x27; ? fn : function () {
+        this[fn].apply(this, args);
+    };
+
+    this.prototype._destroyHooks = this.prototype._destroyHooks || [];
+    this.prototype._destroyHooks.push(destroy);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.token-generator.parent.addInitHook" id="apidoc.element.token-generator.parent.addInitHook">
+        function <span class="apidocSignatureSpan">token-generator.parent.</span>addInitHook
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addInitHook = function (fn) { // (Function) || (String, args...)
+    var args = Array.prototype.slice.call(arguments, 1);
+
+    var init = typeof fn === &#x27;function&#x27; ? fn : function () {
+        this[fn].apply(this, args);
+    };
+
+    this.prototype._initHooks = this.prototype._initHooks || [];
+    this.prototype._initHooks.push(init);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.token-generator.parent.associate" id="apidoc.element.token-generator.parent.associate">
+        function <span class="apidocSignatureSpan">token-generator.parent.</span>associate
+        <span class="apidocSignatureSpan">( alias, TargetClass, type )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">associate = function ( alias, TargetClass, type ) {
+    var association = this.associations.get( TargetClass );
+
+    if ( association ) {
+        return false;
+    }
+
+    return new Association( this, TargetClass, alias, type );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.token-generator.parent.belongsTo" id="apidoc.element.token-generator.parent.belongsTo">
+        function <span class="apidocSignatureSpan">token-generator.parent.</span>belongsTo
+        <span class="apidocSignatureSpan">( alias, TargetClass )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">belongsTo = function ( alias, TargetClass ) {
+    return this.associate( alias, TargetClass, 1 );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.token-generator.parent.construct" id="apidoc.element.token-generator.parent.construct">
+        function <span class="apidocSignatureSpan">token-generator.parent.</span>construct
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">construct = function () {
+    return ClassUtil.construct( this, arguments );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.token-generator.parent.deassociate" id="apidoc.element.token-generator.parent.deassociate">
+        function <span class="apidocSignatureSpan">token-generator.parent.</span>deassociate
+        <span class="apidocSignatureSpan">( TargetClass )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">deassociate = function ( TargetClass ) {
+    var association = this.associations.get( TargetClass );
+
+    if ( ! association ) {
+        return false;
+    }
+
+    association.unbind();
+
+    if( association.targetAssocation ) {
+        association.targetAssociation.unbind();
+        association.unbindTargetAssociation();
+    }
+
+    return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.token-generator.parent.extend" id="apidoc.element.token-generator.parent.extend">
+        function <span class="apidocSignatureSpan">token-generator.parent.</span>extend
+        <span class="apidocSignatureSpan">( props )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extend = function ( props ) {
+    var NewClass = origExtend.apply( this, arguments ),
+        proto = NewClass.prototype,
+        parentProto = NewClass.parent.prototype;
+
+    if( typeof NewClass !== &#x27;function&#x27; ) {
+        return NewClass;
+    }
+
+    // merge options if they exist
+    if ( parentProto.options ) {
+
+        // Create prototyped options on class&#x27;s prototype
+        proto.options = ClassUtil.create( parentProto.options );
+
+        // Now extend from props
+        if( props.options ) {
+            Util.extend( proto.options, props.options );
+        }
+    }
+
+    proto.setOptions = function ( options ) {
+
+        // If this object doesn&#x27;t have options directly
+        if ( ! this.hasOwnProperty(&#x27;options&#x27;) ) {
+
+            // We should create it from a parent proto, or just a new object
+            this.options = this.options ? ClassUtil.create( this.options ) : {};
+
+        }
+
+        // Now extend from props
+        Util.extend( this.options, options );
+
+        // Return always options object, someone could reuse any var with this
+        // Example: function ( o ) { o = this.setOptions( o ); /* ... */ }
+        return this.options;
+    };
+
+    return NewClass;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+var Class = require( &#x27;findhit-class&#x27; ),
+    Util = require( &#x27;findhit-util&#x27; ),
+    crypto = require( &#x27;crypto&#x27; ),
+    debug = require( &#x27;debug&#x27; )( &#x27;token-generator&#x27; );
+
+var TokenGenerator = module.exports = Class.<span class="apidocCodeKeywordSpan">extend</span>({
+
+    options: {
+
+
+/**
+ * @option salt
+ * @required
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.token-generator.parent.hasMany" id="apidoc.element.token-generator.parent.hasMany">
+        function <span class="apidocSignatureSpan">token-generator.parent.</span>hasMany
+        <span class="apidocSignatureSpan">( alias, TargetClass )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hasMany = function ( alias, TargetClass ) {
+    return this.associate( alias, TargetClass, Infinity );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.token-generator.parent.hasOne" id="apidoc.element.token-generator.parent.hasOne">
+        function <span class="apidocSignatureSpan">token-generator.parent.</span>hasOne
+        <span class="apidocSignatureSpan">( alias, TargetClass )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">hasOne = function ( alias, TargetClass ) {
+    return this.associate( alias, TargetClass, 1 );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.token-generator.parent.include" id="apidoc.element.token-generator.parent.include">
+        function <span class="apidocSignatureSpan">token-generator.parent.</span>include
+        <span class="apidocSignatureSpan">(props)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">include = function (props) {
+    Util.extend(this.prototype, props);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.token-generator.parent.mergeOptions" id="apidoc.element.token-generator.parent.mergeOptions">
+        function <span class="apidocSignatureSpan">token-generator.parent.</span>mergeOptions
+        <span class="apidocSignatureSpan">( options )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mergeOptions = function ( options ) {
+    return Util.extend( this.prototype.options, options );
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.token-generator.parent.mixin" id="apidoc.element.token-generator.parent.mixin">
+        function <span class="apidocSignatureSpan">token-generator.parent.</span>mixin
+        <span class="apidocSignatureSpan">(props)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mixin = function (props) {
+    Util.extend(this.prototype, props);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.token-generator.parent.prototype" id="apidoc.module.token-generator.parent.prototype">module token-generator.parent.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.token-generator.parent.prototype.callDestroyHooks" id="apidoc.element.token-generator.parent.prototype.callDestroyHooks">
+        function <span class="apidocSignatureSpan">token-generator.parent.prototype.</span>callDestroyHooks
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">callDestroyHooks = function () {
+
+    if ( this._destroyHooksCalled ) { return; }
+
+    if ( parentProto.callDestroyHooks ) {
+        parentProto.callDestroyHooks.call(this);
+    }
+
+    this._destroyHooksCalled = true;
+
+    for (var i = 0, len = proto._destroyHooks.length; i &#x3c; len; i++) {
+        proto._destroyHooks[i].call(this);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.token-generator.parent.prototype.callInitHooks" id="apidoc.element.token-generator.parent.prototype.callInitHooks">
+        function <span class="apidocSignatureSpan">token-generator.parent.prototype.</span>callInitHooks
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">callInitHooks = function () {
+
+    if ( this._initHooksCalled ) { return; }
+
+    if ( parentProto ) {
+        parentProto.callInitHooks.call(this);
+    }
+
+    this._initHooksCalled = true;
+
+    for (var i = 0, len = proto._initHooks.length; i &#x3c; len; i++) {
+        proto._initHooks[i].call(this);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.token-generator.parent.prototype._initHooks" id="apidoc.module.token-generator.parent.prototype._initHooks">module token-generator.parent.prototype._initHooks</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.token-generator.parent.prototype._initHooks.0" id="apidoc.element.token-generator.parent.prototype._initHooks.0">
+        function <span class="apidocSignatureSpan">token-generator.parent.prototype._initHooks.</span>0
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">0 = function () {
+    var connectors = {};
+
+    Object.defineProperty( this, &#x22;connectors&#x22;, {
+        enumerable: false,
+        writable: true,
+        value: connectors,
+    });
+
+    // Inject a protected getter
+    Object.defineProperty( connectors, &#x22;get&#x22;, {
+        enumerable: false,
+        writable: false,
+        value: Connector._get.bind( connectors ),
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
