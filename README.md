@@ -1,6 +1,6 @@
 # npmdoc-token-generator
 
-#### api documentation for  [token-generator (v1.0.0)](https://github.com/findhit/token-generator)  [![npm package](https://img.shields.io/npm/v/npmdoc-token-generator.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-token-generator) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-token-generator.svg)](https://travis-ci.org/npmdoc/node-npmdoc-token-generator)
+#### basic api documentation for  [token-generator (v1.0.0)](https://github.com/findhit/token-generator)  [![npm package](https://img.shields.io/npm/v/npmdoc-token-generator.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-token-generator) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-token-generator.svg)](https://travis-ci.org/npmdoc/node-npmdoc-token-generator)
 
 #### offline token generator and validator
 
@@ -78,7 +78,8 @@
     "scripts": {
         "test": "node node_modules/mocha/bin/mocha --globals setImmediate,clearImmediate --check-leaks --colors -t 10000 --reporter spec $(find test/* -name '*.test.js')"
     },
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "bin": {}
 }
 ```
 
